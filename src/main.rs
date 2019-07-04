@@ -22,5 +22,9 @@ fn main() {
     let s = String::from("ababa");
     let result = leetcode::tencent::longest_palindrome::center_expand(s);
     println!("{}", result);
+
+    let s = String::from("   +0 123");
+    let result = leetcode::tencent::my_atoi::my_atoi(s);
+    println!("{}", result);
 }
 
