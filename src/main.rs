@@ -26,5 +26,9 @@ fn main() {
     let s = String::from("   +0 123");
     let result = leetcode::tencent::my_atoi::my_atoi(s);
     println!("{}", result);
+
+    let strs = vec![String::from("flower"),String::from("flow"),String::from("flight")];
+    let result = leetcode::tencent::longest_common_prefix::longest_common_prefix(strs);
+    println!("{}", result);
 }
 
