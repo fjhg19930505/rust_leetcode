@@ -1,34 +1,34 @@
 extern crate rand;
 
+use crypto::digest::Digest;
+use crypto::md5::Md5;
+use std::time::SystemTime;
 
 mod leetcode;
 mod normal_test;
 fn main() {
-    let nums: Vec<i32> = vec![3, 2, 4];
-    let target = 6;
-    let result = leetcode::tencent::two_sum::two_sum(nums, target);
-    println!("{:?}", result);
+    /*let start = SystemTime::now();
+    let mut result = String::from("文和");
+    for i in 0 .. 100000000 {
+        result = md5(result);
+    }
 
-    let nums1 = vec![1, 3];
-    let nums2 = vec![2];
-    let result = leetcode::tencent::find_median_sorted_arrays::cal(nums1, nums2);
-    println!("{:?}", result);
+    let end = SystemTime::now();
+    let time = end.duration_since(start).expect("error!");
+    println!("result = {}, cal_time = {}", result, time.as_millis());*/
 
-    let nums1 = vec![2, 3, 6, 7];
-    let nums2 = vec![1, 5, 9];
-    let result = leetcode::tencent::find_median_sorted_arrays::other_cal(nums1, nums2);
-    println!("{:?}", result);
+    let s = String::from("LEETCODEISHIRING");
+    let numRows = 4;
 
-    let s = String::from("ababa");
-    let result = leetcode::tencent::longest_palindrome::center_expand(s);
-    println!("{}", result);
-
-    let s = String::from("   +0 123");
-    let result = leetcode::tencent::my_atoi::my_atoi(s);
-    println!("{}", result);
-
-    let strs = vec![String::from("flower"),String::from("flow"),String::from("flight")];
-    let result = leetcode::tencent::longest_common_prefix::longest_common_prefix(strs);
+    let result = leetcode::tencent::z_transfer::convert(s, numRows);
     println!("{}", result);
 }
+
+pub fn md5<S:Into<String>>(input: S) -> String {
+    let mut md5 = Md5::new();
+    md5.input_str(&input.into());
+    md5.result_str()
+}
+
+
 

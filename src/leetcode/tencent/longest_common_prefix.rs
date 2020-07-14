@@ -14,7 +14,7 @@ pub fn longest_common_prefix(strs: Vec<String>) -> String {
     let mut temp_str = "";
     println!("shortest is {}", shorest);
     let mut i : i32 = shorest as i32 - 1;
-    while(i >= 0) {
+    while i >= 0 {
         println!("i is {}", i);
         for s in strs.iter() {
            println!("char is {}", s);
